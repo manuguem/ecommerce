@@ -1,7 +1,7 @@
 import ItemListContainer from "../Card/ItemListContainer";
 import { Grid } from "@mui/material";
 
-const ImageItem = () => {
+const ItemList = () => {
   return (
     <Grid item xs={2}>
       <ItemListContainer image={"178483-1200-auto.webp"} />
@@ -9,4 +9,4 @@ const ImageItem = () => {
   );
 };
 
-export default ImageItem;
+export default ItemList;
