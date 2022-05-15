@@ -1,10 +1,9 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-//import Button from "@mui/material/Button";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Navbar.css";
 import { Button } from "@mui/material";
+import { CartWidget } from "./CartWidget";
 
 export const Navbar = () => {
   return (
@@ -25,7 +24,7 @@ export const Navbar = () => {
           </li>
         </ul>
         <Button color="inherit" style={{ marginLeft: "auto" }}>
-          <AddShoppingCartIcon />
+          <CartWidget />
         </Button>
       </Toolbar>
     </AppBar>
