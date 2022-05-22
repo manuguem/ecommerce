@@ -2,6 +2,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import ItemCount from "./ItemCount";
 
 const ItemListContainer = ({ image }) => {
   return (
@@ -15,9 +16,8 @@ const ItemListContainer = ({ image }) => {
           src={`./${image}`}
           alt="Images"
         />
-        <Button size="small" style={{ color: "black", fontWeight: "bolder" }}>
-          Agregar
-        </Button>
+
+        <ItemCount />
       </Card>
     </Box>
   );
