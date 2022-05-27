@@ -1,7 +1,8 @@
 import ItemListContainer from "../Card/ItemListContainer";
 import { Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 
-const ItemList = () => {
+const ItemList = (products) => {
   return (
     <Grid
       container
@@ -12,21 +13,28 @@ const ItemList = () => {
         marginTop: "1.5rem",
       }}
     >
-      <Grid item md={2}>
+      {/* <Grid item md={2}>
         <div>
-          <ItemListContainer image={"178483-1200-auto.webp"} />
+          <ItemListContainer image={image} />
         </div>
       </Grid>
       <Grid item md={2}>
         <div>
-          <ItemListContainer image={"180368-1200-auto.webp"} />
+          <ItemListContainer image={image} />
         </div>
       </Grid>
       <Grid item md={2}>
         <div>
-          <ItemListContainer image={"156597-1200-auto.webp"} />
+          <ItemListContainer image={image} />
         </div>
-      </Grid>
+      </Grid> */}
+      {products.map(({ title, price, id, stock, image }) => {
+        return (
+          <Grid item md={2}>
+            <ItemListContainer price={price} image={image} stock={stock} />
+          </Grid>
+        );
+      })}
     </Grid>
   );
 };
